@@ -62,15 +62,15 @@
 
 
 .profile_img1 img {
-    width: 40%;     /* 부모 div 대비 45% 너비 */
-    height: auto;   /* 비율 유지 */
+    width: 337.5px;     /* 부모 div 대비 45% 너비 (수정) */
+    height: 450px;   /* 비율 유지 (수정)*/
     display: block; /* 아래 여백 없애기 */
     margin: 50px auto; /* 위아래 간격 + 가운데 정렬 */
 }
 
 .profile_img2 img {
-    width: 40%;     /* 부모 div 대비 45% 너비 */
-    height: auto;   /* 비율 유지 */
+    width: 337.5px;     /* 부모 div 대비 45% 너비 (수정) */
+    height: 450px;   /* 비율 유지 (수정)*/
     display: block; /* 아래 여백 없애기 */
     margin: 50px auto; /* 위아래 간격 + 가운데 정렬 */
 }
