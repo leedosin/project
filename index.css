@@ -1,0 +1,182 @@
+.menu { /*상단에 있는 메뉴 바 입니다*/
+    display: flex; /*정렬(가로가 디폴트)*/
+    justify-content: flex-end; /*안에 요소들 뒤로 붙이는 거*/
+    gap: 25px; /*요소들 사이 간격 주기*/
+    background-color: #ffffff;
+    padding-right: 80px; /* 안에 요소만 띄움 참고로 마진은 요소 바깥여백에 적용되는 거임 */
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid #ddd; /* 아래쪽 테두리 넣은겨*/
+    position: sticky; /* 스크롤 내려오면 붙는겅 */
+    top: 0;           /* 화면 상단에!! */
+    z-index: 1000; /* 다른 요소들 위에 오게 함ㅋ */
+}
+
+.logo { 
+    margin-right: auto; /* 이후 요소 전부 오른쪽으로 밀어냄 */
+    padding-left: 30px; /* 안에 요소만 띄움 참고로 마진은 요소 바깥여백에 적용되는 거임 */
+}
+
+.logo img {
+    height: 52px;
+}
+
+.menu_item { /*메뉴 바 안에 요소들*/
+    font-size: 35px;
+    color: #a3a3a3;
+
+    cursor: pointer; /* 마우스 올리면 손가락 모양 */
+    transition: color 0.25s ease; /* 색 변화 부드럽게 */
+
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.menu_item:hover {
+    color: #000000; /* 호버 시 검정색 */
+}
+
+.menu_split { /*요소 사이 분할*/
+    font-size: 33px;
+    font-weight: 200;
+    color: #8c8c8c;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column; /*   세로로 쌓아라 */
+    height: 130vh; /* 브라우저 화면 높이만큼이다 그리고 이것은 추후에 메뉴바가 언제쯤 사라지게 할지를 결정함*/ 
+    margin-top: 30px;
+}
+
+.main {
+    flex: 1;                /* 공간 꽉 채움 */
+    display: flex;           /* 플렉스 레이아웃 */
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* 세로 중앙 */
+    flex-direction: column;  /* 세로로 쌓아라 */
+}
+
+.main_img1 {
+    position: relative; /* 기준점 선언 */
+}
+
+.main_img_text1 {
+    position: absolute;        /* 부모 기준으로 겹침 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 정확히 중앙 */
+    
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: 700;
+    
+    text-align: center; /*글자 중앙 정렬*/
+    line-height: 1;   /* 줄 간격 최소화 */
+    
+    white-space: nowrap; /* 자동 줄바꿈 금지 */
+}
+
+ /**************************************************************/
+.main_img2 {
+    position: relative; /* 기준점 선언 */
+
+    opacity: 0;          /* 처음에 안 보이게 */
+    transform: translateY(50px);  /* 약간 아래로 이동 */
+    transition: all 1s ease-out; /* 등장할 때 애니메이션 */
+}
+
+.main_img_text2 {
+    position: absolute;        /* 부모 기준으로 겹침 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 정확히 중앙 */
+    
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: 700;
+    
+    text-align: center; /*글자 중앙 정렬*/
+    line-height: 1;   /* 줄 간격 최소화 */
+    
+    white-space: nowrap; /* 자동 줄바꿈 금지 */
+}
+
+.main_img2.active { /*이 부분은 js와 관련 있는 부분이다*/
+    opacity: 1;           /* 보이게 */
+    transform: translateY(0); /* 원위치 */
+}
+ /**************************************************************/
+.main_img3 {
+    position: relative; /* 기준점 선언 */
+
+    opacity: 0;          /* 처음에 안 보이게 */
+    transform: translateY(50px);  /* 약간 아래로 이동 */
+    transition: all 1s ease-out; /* 등장할 때 애니메이션 */
+}
+
+.main_img_text3 {
+    position: absolute;        /* 부모 기준으로 겹침 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 정확히 중앙 */
+    
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: 700;
+    
+    text-align: center; /*글자 중앙 정렬*/
+    line-height: 1;   /* 줄 간격 최소화 */
+    
+    white-space: nowrap; /* 자동 줄바꿈 금지 */
+}
+
+.main_img3.active { /*이 부분은 js와 관련 있는 부분이다*/
+    opacity: 1;           /* 보이게 */
+    transform: translateY(0); /* 원위치 */
+}
+
+
+
+.main_img4 {
+    position: relative; /* 기준점 선언 */
+
+    opacity: 0;          /* 처음에 안 보이게 */
+    transform: translateY(50px);  /* 약간 아래로 이동 */
+    transition: all 1s ease-out; /* 등장할 때 애니메이션 */
+}
+
+.main_img_text4 {
+    position: absolute;        /* 부모 기준으로 겹침 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* 정확히 중앙 */
+    
+    color: #ffffff;
+    font-size: 80px;
+    font-weight: 700;
+    
+    text-align: center; /*글자 중앙 정렬*/
+    line-height: 1;   /* 줄 간격 최소화 */
+    
+    white-space: nowrap; /* 자동 줄바꿈 금지 */
+}
+
+.main_img4.active { /*이 부분은 js와 관련 있는 부분이다*/
+    opacity: 1;           /* 보이게 */
+    transform: translateY(0); /* 원위치 */
+}
+
+.main_about {
+    display: flex; /*정렬(가로가 디폴트)*/
+    flex-direction: column; /* 정렬 세로로 쌓아라 */
+    justify-content: center;     /* 가로 중앙 정렬 */
+    align-items: center;         /* 세로 중앙 정렬 */
+    background-color: #f5f5f7;
+
+    padding-bottom: 30px; /* 안에 요소만 띄움 참고로 마진은 요소 바깥여백에 적용되는 거임 */
+    padding-top: 30px; /* 안에 요소만 띄움 참고로 마진은 요소 바깥여백에 적용되는 거임 */
+}
+
+.main_about_item {
+    color: #666666;
+}

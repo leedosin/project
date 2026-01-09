@@ -1,0 +1,240 @@
+.menu { /*상단에 있는 메뉴 바 입니다*/
+    display: flex; /*정렬(가로가 디폴트)*/
+    justify-content: flex-end; /*안에 요소들 뒤로 붙이는 거*/
+    gap: 25px; /*요소들 사이 간격 주기*/
+    background-color: #ffffff;
+    padding-right: 80px; /* 안에 요소만 띄움 참고로 마진은 요소 바깥여백에 적용되는 거임 */
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid #ddd; /* 아래쪽 테두리 넣은겨*/
+    position: sticky; /* 스크롤 내려오면 붙는겅 */
+    top: 0;           /* 화면 상단에!! */
+    z-index: 1000; /* 다른 요소들 위에 오게 함ㅋ */
+}
+
+.logo { 
+    margin-right: auto; /* 이후 요소 전부 오른쪽으로 밀어냄 */
+    padding-left: 30px; /* 안에 요소만 띄움 참고로 마진은 요소 바깥여백에 적용되는 거임 */
+}
+
+.logo img {
+    height: 52px;
+}
+
+.menu_item { /*메뉴 바 안에 요소들*/
+    font-size: 35px;
+    color: #a3a3a3;
+
+    cursor: pointer; /* 마우스 올리면 손가락 모양 */
+    transition: color 0.25s ease; /* 색 변화 부드럽게 */
+
+    text-decoration: none; /* 밑줄 제거 */
+}
+
+.menu_item:hover {
+    color: #000000; /* 호버 시 검정색 */
+}
+
+.menu_split { /*요소 사이 분할*/
+    font-size: 33px;
+    font-weight: 200;
+    color: #8c8c8c;
+}
+
+.etc_container { /*가장 큰 디브, 2025와 2024로 나눠져있다*/
+    display: flex;            /* flex 사용 */
+    flex-direction: column;   /* 세로로 쌓기 */
+    align-items: center;      /* 가로축 기준 가운데 정렬 */
+    /* justify-content: center;  /* 세로축 기준 가운데 정렬 */
+    margin: 50px;
+    height: 50vh;           /* 부모 높이 필요 */
+}
+
+.etc_2025 {
+    margin-bottom: 100px;
+}
+
+.etc_2024 {
+    padding-bottom: 100px;
+}
+
+.etc_2023 {
+    padding-bottom: 100px;
+}
+
+/* ㅇㅇㅇㅇㅇㅇㅇㅇㅇ여기서부터는 2025만 다뤄져 있습니다ㅇㅇㅇㅇㅇㅇㅇ */
+.etc_title {
+    font-size: 75px;
+    font-weight: 800;
+    text-align: center; /* 한 줄이든 두 줄이든 가로 중앙 */
+    color: #1c1c1f;
+}
+
+.etc_assist {
+    font-size: 15px;
+    font-weight: 400;
+
+    display: flex; /*정렬(가로가 디폴트)*/
+    justify-content: flex-end; /*안에 요소들 뒤로 붙이는 거*/
+
+    color: #777777;
+    margin: 20px;
+}
+
+.etc_album {
+    display: flex; /*정렬(가로가 디폴트)*/
+    justify-content: center; /* 가로 중앙 정렬*/
+    gap: 70px;
+}
+
+
+.etc_albums {
+    /* 나중에 요소들 세로 정렬 넣을 거 ㅇㅇ */ 
+    /* 딱히 안 넣었는데 자동으로 되긴 함 */
+}
+
+.etc_album_img {
+    display: flex; 
+    justify-content: center; /* 가로 중앙 */
+    align-items: center;     /* 세로 중앙 */
+    pointer-events: none; /* 부모는 마우스 이벤트 무시 */
+}
+.etc_album_img img{
+    width: 350px;   /* 가로 크기 지정 */
+    height: 350px;  /* 세로 크기 지정 */
+    border-radius: 50%; /* 원형 이미지 */
+    cursor: pointer;                /* 마우스 올리면 손가락 */
+    transition: 
+        opacity 0.25s ease,
+        filter 0.25s ease,        /* 부드럽게 */
+        transform 0.25s ease; /* 호버 시 크기 변화 자연스럽게 */
+    pointer-events: auto; /* 이미지만 이벤트 받음 */
+}
+
+.etc_album_img img:hover {
+    opacity: 0.6;                  /* 살짝 흐릿 */
+    filter: brightness(0.95);       /* 색감 살짝 눌러줌 */
+    transform: scale(0.985); /* 👈살짝 줄어듦 */
+}
+
+.etc_album_title_singer {
+    display: flex;            /* flex 사용 */
+    flex-direction: column;   /* 세로로 쌓기 */
+    align-items: center;      /* 가로축 기준 가운데 정렬 */
+    margin: 30px;
+}
+
+.etc_album_title {
+    font-size: 27px;
+    font-weight: 700;
+    color: #1f1f22;
+}
+
+.etc_album_singer {
+    font-size: 19px;
+    font-weight: 500;
+    color: #777777;
+}
+
+.etc_lyrics {
+    display: flex;            /* flex 사용 */
+    justify-content: center; /* 가로 중앙 */
+    flex-direction: column;   /* 세로로 쌓기 */
+}
+
+.etc_lyrics_mold {
+    display: flex;            /* flex 사용 */
+    flex-direction: column;   /* 세로로 쌓기 */
+    justify-content: center; /* 가로 중앙  ?? */
+    align-items: center;      /* 가로축 기준 가운데 정렬 */
+    margin: 7px;
+}
+
+/*ㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴ*/
+
+.etc_lyrics_mold_title_btn {
+    display: flex;            /* flex 사용 */
+    justify-content: center; /* 가로 중앙  ?? */
+
+    width: 25%;
+    padding: 22px 26px;
+
+    background-color: #232323;
+    color: #f5f5f7;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 14px;
+
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: -0.2px; /* 애플식 자간 보정 */
+
+    text-align: left;
+    cursor: pointer;
+
+    transition:
+        background-color 0.25s ease, /* 색 변화 부드럽게 */
+        box-shadow 0.25s ease,       /* 그림자 자연스럽게 */
+        transform 0.15s ease;        /* 위치 변화 즉각 반응 */
+}
+
+/* 마우스 올렸을 때 */
+.etc_lyrics_mold_title_btn:hover {
+    background-color: #2f2f2f;       /* 살짝 밝아져서 반응 표시 */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6); /* 버튼이 떠오르는 느낌 */
+    transform: translateY(-1px);     /* 미세하게 위로 떠오름 */
+}
+
+/* 눌렀을 때 */ /*실제 버튼 누르는 촉감을 시각으로 속이는 느낌 ㅋ*/
+.etc_lyrics_mold_title_btn:active {
+    transform: translateY(0);        /* 다시 눌리듯 제자리 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* 눌린 깊이감 */
+}
+
+/* 포커스(키보드 접근성) */
+.etc_lyrics_mold_title_btn:focus {
+    outline: none;                   /* 기본 포커스 제거 */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.15); /* 은은한 포커스 표시 */
+}
+/*ㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴㄴ*/
+
+.etc_lyrics_mold_lyrics{ /*가사 숨겨지고 자시고 하는 부분*/
+    max-height: 0;           /* 처음엔 숨김 */
+    overflow: hidden;        /* 내용 넘치면 안 보이게 */
+    transition: max-height 0.3s ease; /* 부드럽게 열리도록 */
+
+    /* 글자디자인부분 */
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5;  /* 가사 가독성 ㅇㅇ */
+    color: #1d1d1f;
+    font-weight: 400;
+}
+
+.etc_lyrics_mold_lyrics.active { /*가사 숨겨지고 자시고 하는 부분*/
+    max-height: 1500px;       /* 펼쳐질 최대 높이 (내용에 맞게 조정) */
+}
+
+.etc_2024 {
+    opacity: 0;          /* 처음에 안 보이게 */
+    transform: translateY(50px);  /* 약간 아래로 이동 */
+    transition: all 1s ease-out; /* 등장할 때 애니메이션 */
+}
+
+
+.etc_2024.active  { /*이 부분은 js와 관련 있는 부분이다*/
+    opacity: 1;           /* 보이게 */
+    transform: translateY(0); /* 원위치 */
+}
+
+.etc_2023 {
+    opacity: 0;          /* 처음에 안 보이게 */
+    transform: translateY(50px);  /* 약간 아래로 이동 */
+    transition: all 1s ease-out; /* 등장할 때 애니메이션 */
+}
+
+
+.etc_2023.active  { /*이 부분은 js와 관련 있는 부분이다*/
+    opacity: 1;           /* 보이게 */
+    transform: translateY(0); /* 원위치 */
+}
